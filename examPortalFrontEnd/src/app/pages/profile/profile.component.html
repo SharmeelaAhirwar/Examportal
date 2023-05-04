@@ -1,0 +1,66 @@
+<mat-card *ngIf="user">
+    <h1>welcome to profile</h1>
+   
+    <mat-card-content>
+        <div class="bootstrap-wrapper">
+            <div  class="container text-align ">
+                <img class=" profile-image"
+                    src="https://thumbs.dreamstime.com/b/default-avatar-profile-icon-social-media-user-vector-default-avatar-profile-icon-social-media-user-vector-portrait-176194876.jpg"
+                    alt="">
+                <h1>{{user.firstName}}  {{user.lastName}}</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <!-- table -->
+                        <table  class="tableset text-align">
+                            <!-- <tr>
+                                <th>position</th>
+                                <th>name</th>
+                                <th>role</th>
+                                <th>email</th>
+                                <th>username</th>
+                                <th>phone no</th>
+                            </tr> -->
+                            
+                            <tr>
+                                <td>username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>email</td>
+                                <td>{{user.email}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>phone </td>
+                                <td>{{user.phoneNumber}}</td>
+                            </tr>
+
+                            <tr>
+                                <td>Role</td>
+                                <td>{{user.authorities[0].authority}}</td>
+                            </tr>
+                            <tr>
+                                <td>status</td>
+                                <td>{{user.enable}}</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="text-align">
+        <button mat-raised-button color="primary">update</button>
+    <button mat-raised-button color="accent">delete</button>
+      </mat-card-actions>
+</mat-card>
